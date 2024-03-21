@@ -16,10 +16,10 @@ To tell a compelling story of Melbourne's dining scene using data visualisations
 ### 1. Data Enrichment - Adding 'Cuisine Type' (Due: Sun, 24/03/2024)
 
 - **Assignment:** Each team member is responsible for enriching a segment of the dataset with 'Cuisine Type' information sourced from Google.
-  - **1-125:** Gilbert
-  - **126-250:** Hazel
-  - **251-375:** Hazel
-  - **376-500:** Marianne
+- Sort by name: A to Z
+  - **Row 2-126:** Gilbert
+  - **Row 126-376:** Hazel
+  - **Row 376-501:** Marianne
 
 ### 2. Data Cleansing & Database (Due: Sun, 24/03/2024)
 
