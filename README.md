@@ -26,7 +26,7 @@ To tell a compelling story of Melbourne's dining scene using data visualisations
 - **Objective:** Cleanse the dataset by splitting the 'Address' column into 'Street Address', 'Suburb', and 'Postcode'.
 - **Assignee:** Ashrita
 
-### 3. Web Interface Development (Due: Sun, 24/03/2024)
+### 3. Web Interface Development (Due: Thu, 28/03/2024)
 
 - **Task:** Create a main page that links to all visualisations and analyses.
 - **Assignee:** Hazel
