@@ -33,17 +33,17 @@ To tell a compelling story of Melbourne's dining scene using data visualisations
 
 ### 4. Visualisations (Due: Thu, 28/03/2024)
 
-#### 3.1 Street Map with Dropdown Filters
+#### 4.1 Street Map with Dropdown Filters
 
 - **Description:** Visualise eateries on a street map, incorporating dropdown menus for filtering by 'Cuisine Type'.
 - **Assignee:** Gilbert
 
-#### 3.2 Heat Map of Suburbs
+#### 4.2 Heat Map of Suburbs
 
 - **Description:** Display which suburbs contain eateries using a heat map. Colour coding will indicate popularity based on the number of reviews.
 - **Assignee:** Gilbert
 
-#### 3.3 Restaurant Listing with Filter Functions
+#### 4.3 Restaurant Listing with Filter Functions
 
 - **Description:** List restaurants with details including Name, Address, Cuisine Type, and Price Level, ordered by popularity. Include filter functions for 'Price Level'.
 - **Assignee:** Marianne
