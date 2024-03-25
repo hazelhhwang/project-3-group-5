@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project 3: Data Visualisation of Melbourne's Dining Scene</title>
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        .container {
+            margin: auto;
+            width: 80%;
+            padding: 10px;
+        }
+        .visualisation {
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            height: 400px; /* Set a height for the map visualisation */
+        }
+        h1, h2 {
+            color: #333;
+        }
+        /* Additional style for the map container */
+        #streetMap {
+            height: 400px; /* Set a fixed height for your map */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Explore Melbourne's Dining Scene</h1>
+        <div id="streetMap" class="visualisation">
+            <!-- The map will be rendered here by the street-map.js script -->
+        </div>
+        <div id="heatMap" class="visualisation">
+            <h2>Heat Map of Suburbs</h2>
+            <!-- Placeholder for the Heat Map visualisation -->
+        </div>
+        <div id="restaurantList" class="visualisation">
+            <h2>Restaurant Listing with Filter Functions</h2>
+            <!-- Placeholder for the Restaurant Listing visualisation -->
+        </div>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <!-- Your custom JS for the street map visualisation -->
+    <script src="street-map.js"></script>
+    <!-- If you have other JS files for additional visualisations, include them below -->
+    <!-- <script src="path/to/heat-map.js"></script> -->
+    <!-- <script src="path/to/restaurant-list.js"></script> -->
+</body>
+</html>
+
+
+
