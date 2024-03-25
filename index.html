@@ -14,7 +14,7 @@
             text-align: center;
         }
         .container {
-            margin: auto;
+            margin: 20px auto; /* Increased margin for gaps between containers */
             width: 80%;
             padding: 10px;
         }
@@ -30,30 +30,42 @@
             color: #333;
         }
         /* Additional style for the map container */
-        #streetMap {
-            height: 400px; /* Set a fixed height for your map */
+        #streetMap, #heatMap, #restaurantList {
+            height: 400px; /* Set a fixed height for your maps */
         }
     </style>
 </head>
 <body>
+    <h1 class="main-title">Explore Melbourne's Dining Scene</h1>
+    
+
+    <!-- Street Map Container -->
+    <h2 class="section-title">Street Map with Dropdown Filters</h2>
     <div class="container">
-        <h1>Explore Melbourne's Dining Scene</h1>
         <div id="streetMap" class="visualisation">
             <!-- The map will be rendered here by the street-map.js script -->
         </div>
+    </div>
+
+    <!-- Heat Map Container -->
+    <h2 class="section-title">Heat Map of Suburbs</h2>
+    <div class="container">
         <div id="heatMap" class="visualisation">
-            <h2>Heat Map of Suburbs</h2>
             <!-- Placeholder for the Heat Map visualisation -->
         </div>
+    </div>
+
+    <!-- Restaurant List Container -->
+    <h2 class="section-title">Restaurant Listing with Filter Functions</h2>
+    <div class="container">
         <div id="restaurantList" class="visualisation">
-            <h2>Restaurant Listing with Filter Functions</h2>
             <!-- Placeholder for the Restaurant Listing visualisation -->
         </div>
     </div>
 
     <!-- Leaflet JS -->
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-    <!-- Your custom JS for the street map visualisation -->
+    <!-- Your custom JS for the visualisations -->
     <script src="street-map.js"></script>
     <script src="heat-map.js"></script>
     <!-- <script src="path/to/restaurant-list.js"></script> -->
