@@ -1,88 +1,100 @@
-import fetch from 'node-fetch';
-
-document.addEventListener('DOMContentLoaded', async function() {
+document.addEventListener('DOMContentLoaded', function() {
     var heatMap = L.map('heatMap').setView([-37.8136, 144.9631], 13);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
         attribution: '© OpenStreetMap contributors'
     }).addTo(heatMap);
 
-    // Function to fetch postcode coordinates from AusPost API
-    async function fetchPostcodeCoordinates(postcode) {
-        const query = new URLSearchParams({
-            pc: 'string',
-            types: 'PO'
-        }).toString();
-      
-        const resp = await fetch(
-            `https://digitalapi.auspost.com.au/locations/v2/points/postcode/${postcode}?${query}`,
-            {
-                method: 'GET',
-                headers: {
-                    'AUTH-KEY': process.env.AUSPOST_API_KEY
-                }
-            }
-        );
-
-        const data = await resp.json();
-        if (data && data.locations && data.locations.length > 0) {
-            const location = data.locations[0].point;
-            return [location.latitude, location.longitude];
-        } else {
-            console.error(`No coordinates found for postcode ${postcode}`);
-            return null;
-        }
-    }
+    // Define color scheme for the legend
+    var legendColors = {
+        '0-100': 'blue',
+        '101-300': 'green',
+        '301-500': 'yellow',
+        '501-1000': 'orange',
+        '1000+': 'red'
+    };
 
     // Load and parse the CSV data
-    Papa.parse('updated_reviews1.csv', {
+    Papa.parse('data_with_coordinates.csv', {
         download: true,
         header: true,
         dynamicTyping: true,
         skipEmptyLines: true,
-        complete: async function(results) {
+        complete: function(results) {
             // Access the parsed data
             var restaurantData = results.data;
 
-            // Create an object to store the number of reviews for each postcode
-            var postcodeReviews = {};
+            // Define legend ranges and colors arrays
+            var legendRanges = [];
+            var legendColorsArr = [];
 
-            // Iterate over the data to populate the postcodeReviews object
-            for (let restaurant of restaurantData) {
-                var postcode = restaurant.Postcode;
-                var reviews = restaurant.numberOfReviews;
+            // Iterate over the data to create markers for each restaurant
+            restaurantData.forEach(function(restaurant) {
+                var name = restaurant.name;
+                var cuisineType = restaurant.cuisinetype;
+                var numberOfReviews = restaurant.numberOfReviews;
+                var latitude = restaurant.latitude;
+                var longitude = restaurant.longitude;
 
-                // If the postcode is not already in the object, initialize it
-                if (!postcodeReviews[postcode]) {
-                    postcodeReviews[postcode] = 0;
+                // Define marker style based on the number of reviews
+                var fillColor;
+                if (numberOfReviews <= 100) {
+                    fillColor = legendColors['0-100'];
+                } else if (numberOfReviews <= 300) {
+                    fillColor = legendColors['101-300'];
+                } else if (numberOfReviews <= 500) {
+                    fillColor = legendColors['301-500'];
+                } else if (numberOfReviews <= 1000) {
+                    fillColor = legendColors['501-1000'];
+                } else {
+                    fillColor = legendColors['1000+'];
                 }
 
-                // Increment the number of reviews for the postcode
-                postcodeReviews[postcode] += reviews;
+                var markerStyle = {
+                    radius: 8, // Fixed size for all markers
+                    fillColor: fillColor,
+                    color: '#fff',
+                    weight: 1,
+                    opacity: 1,
+                    fillOpacity: 0.8
+                };
+
+                // Create marker for each restaurant
+                var marker = L.circleMarker([latitude, longitude], markerStyle)
+                    .bindPopup(`<b>${name}</b><br>${cuisineType}<br>Reviews: ${numberOfReviews}`)
+                    .addTo(heatMap);
+            });
+
+            // Populate legend arrays
+            for (var range in legendColors) {
+                legendRanges.push(range);
+                legendColorsArr.push(legendColors[range]);
             }
 
-            // Create an array of LatLng points based on the postcode and its number of reviews
-            var heatMapData = [];
-            for (let postcode in postcodeReviews) {
-                let coordinates = await fetchPostcodeCoordinates(postcode);
-                if (coordinates) {
-                    heatMapData.push(coordinates.concat(postcodeReviews[postcode]));
+            // Add legend to the map
+            var legend = L.control({position: 'bottomright'});
+            legend.onAdd = function(map) {
+                var div = L.DomUtil.create('div', 'legend');
+                div.innerHTML += '<h4>Number of Reviews</h4>';
+                for (var i = 0; i < legendRanges.length; i++) {
+                    div.innerHTML += `<div><i style="background:${legendColorsArr[i]}"></i>${legendRanges[i]}</div>`;
+                }
+                return div;
+            };
+            legend.addTo(heatMap);
+
+            // Function to update the legend
+            function updateLegend() {
+                // Clear existing legend content
+                var legendDiv = document.querySelector('.legend');
+                legendDiv.innerHTML = '<h4>Number of Reviews</h4>';
+                // Populate legend with updated values
+                for (var i = 0; i < legendRanges.length; i++) {
+                    legendDiv.innerHTML += `<div><i style="background:${legendColorsArr[i]}"></i>${legendRanges[i]}</div>`;
                 }
             }
-
-            // Create the heat layer using the heatMapData array
-            var heat = L.heatLayer(heatMapData, {
-                radius: 20,
-                blur: 15,
-                maxZoom: 17,
-            }).addTo(heatMap);
         }
     });
 });
-
-
-
-
-
 
 
