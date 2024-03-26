@@ -1,0 +1,51 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&family=Rubik:wght@300..900&display=swap');
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #1c1e29;
+  text-align: center;
+  color: #abb2bf;
+}
+
+.main-title {
+  font-family: 'Rubik Doodle Shadow', cursive; /* Updated font for main title */
+  color: #00b8a9;
+  margin: 40px 0;
+  font-size: 50px; /* Example: Adjust the font size as needed */
+}
+
+.section-title {
+  font-family: 'Rubik', sans-serif; /* Updated font for section titles */
+  color: #abb2bf;
+  text-align: center;
+  margin-top: 60px; /* Clear space between section titles and the map containers */
+}
+
+.container {
+  margin: 40px auto; /* Ensures clear space around each container */
+  width: 80%; /* Adjust if necessary to fit your design */
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Soft shadow for depth */
+  display: flex; /* Flexbox for alignment */
+  flex-direction: column; /* Stack children elements vertically */
+  align-items: center; /* Center-align the child elements */
+}
+
+.visualisation {
+  width: 100%; /* Ensure map containers take full width of their parent container */
+  height: 400px; /* Fixed height for better control and visibility */
+  margin: 20px 0; /* Margin adjustment for visual separation */
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Consistent shadow with the container */
+}
+
+
+
