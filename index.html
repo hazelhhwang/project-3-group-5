@@ -18,6 +18,14 @@
     <!-- Street Map Container -->
     <h2 class="section-title">Street Map with Dropdown Filters</h2>
     <div class="container">
+        <!-- Dropdown Filter for Cuisine Type -->
+        <div class="filter-container">
+            <label for="cuisine-filter">Filter by cuisine type:</label>
+            <select id="cuisine-filter" class="cuisine-filter">
+                <option value="all">All Cuisines</option>
+                <!-- Additional options will be populated here by street-map.js -->
+            </select>
+        </div>
         <div id="streetMap" class="visualisation">
             <!-- The map will be rendered here by the street-map.js script -->
         </div>
