@@ -8,5 +8,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Optionally, add a marker at the center of Melbourne
     L.marker([-37.8136, 144.9631]).addTo(map)
         .bindPopup('The heart of Melbourne.').openPopup();
+
 });
 
