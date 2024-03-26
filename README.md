@@ -38,9 +38,9 @@ To tell a compelling story of Melbourne's dining scene using data visualisations
 - **Description:** Visualise eateries on a street map, incorporating dropdown menus for filtering by 'Cuisine Type'.
 - **Assignee:** Gilbert
 
-#### 4.2 Heat Map of Suburbs
+#### 4.2 Cluster Map of Suburbs
 
-- **Description:** Display which suburbs contain eateries using a heat map. Colour coding will indicate popularity based on the number of reviews.
+- **Description:** Display which suburbs contain eateries using a cluster map. Colour coding will indicate popularity based on the number of reviews.
 - **Assignee:** Gilbert
 
 #### 4.3 Restaurant Listing with Filter Functions
