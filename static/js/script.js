@@ -1,7 +1,7 @@
 // Wait for the DOM content to be loaded before running the script
 document.addEventListener('DOMContentLoaded', function() {
     // Fetch JSON data
-    fetch('restaurants_data.json')
+    fetch('static/data/restaurants_data.json')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Event listener for the price level filter dropdown
     document.getElementById('priceLevelFilter').addEventListener('change', function() {
         const selectedFilter = this.value;
-        fetch('restaurants_data.json')
+        fetch('static/data/restaurants_data.json')
             .then(response => response.json())
             .then(data => {
                 displayRestaurants(data, selectedFilter);

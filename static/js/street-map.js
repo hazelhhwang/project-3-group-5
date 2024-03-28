@@ -8,17 +8,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
     var markers = {};
 
-    function fetchCSVData(filePath) {
+    function fetchJSONData(filePath) {
         fetch(filePath)
-            .then(response => response.text())
-            .then(csv => Papa.parse(csv, { header: true, dynamicTyping: true, skipEmptyLines: true }))
-            .then(result => {
-                processCSVData(result.data);
+            .then(response => response.json()) // Parse response as JSON
+            .then(data => {
+                processJSONData(data);
             })
-            .catch(error => console.error('Error loading CSV data:', error));
+            .catch(error => console.error('Error loading JSON data:', error));
     }
 
-    function processCSVData(data) {
+    function processJSONData(data) {
         data.forEach(restaurant => {
             var cuisine = restaurant.cuisinetype || 'Other';
             var marker = L.marker([restaurant.latitude, restaurant.longitude]);
@@ -62,6 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
         filterMarkers(e.target.value);
     });
 
-    fetchCSVData('data_with_coordinates.csv'); 
+    fetchJSONData('static/data/data_with_coordinates.json'); 
 });
+
 
