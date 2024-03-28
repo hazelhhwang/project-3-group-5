@@ -96,8 +96,42 @@ We also decided to add the cusine type for each restaurant into our csv file, as
 - How to use it 
 
 **3. Filter function (Marianne)**
-- How you did it 
-- How to use it 
+
+To enhance user interaction with Melbourne's top 500 eateries, we implemented a price filter widget, allowing users to explore restaurants based on their price level. This widget was developed using JavaScript and integrated with a JSON dataset, which was converted from the original CSV file. The JavaScript fetch API was utilized to asynchronously retrieve the dataset, ensuring the page remains responsive while loading the data.
+
+Step 1: Fetching and Processing Data
+
+The initial step involves fetching the restaurant data from a JSON file using the Fetch API. Upon successful retrieval, the data is processed to populate the price filter dropdown and display the restaurant listings.
+
+<img width="483" alt="image" src="https://github.com/hazelhhwang/project-3-group-5/assets/150411822/fd117e23-7e5b-49c0-a46c-95533dc0dd41">
+
+This block waits for the document content to fully load and then attempts to fetch the restaurant data. Once the data is fetched and converted to JSON format, two functions are called: one to populate the price level dropdown and another to initially display all restaurants.
+
+Step 2: Populating the Dropdown
+
+The populatePriceLevelDropdown function is responsible for creating unique dropdown options based on the priceLevel properties found in the dataset. It employs a custom sort order to ensure the price levels are displayed logically from lowest to highest.
+
+<img width="513" alt="image" src="https://github.com/hazelhhwang/project-3-group-5/assets/150411822/d6bd628c-7b7c-4a63-8dfb-161d9a9d7434">
+
+This function first creates a unique set of price levels, sorts them according to a predefined order, and then dynamically adds these options to the dropdown menu in the HTML document.
+
+Step 3: Displaying Restaurants
+
+The displayRestaurants function shows restaurants on the page, filtering them based on the selected price level if any. It starts by filtering the dataset to match the selected price level, sorts the filtered results by the number of reviews (indicating popularity), and then dynamically creates HTML elements to display the filtered restaurant data.
+
+<img width="516" alt="image" src="https://github.com/hazelhhwang/project-3-group-5/assets/150411822/032e8f05-64be-4cbf-b2d6-525fa25d87f4">
+
+Step 4: Handling User Input
+
+Lastly, an event listener is added to the dropdown menu to respond to user selections. When a new price level is selected, it fetches the data again (though, ideally, it should use the already loaded data to avoid unnecessary network requests) and displays the restaurants according to the selected price level.
+
+<img width="534" alt="image" src="https://github.com/hazelhhwang/project-3-group-5/assets/150411822/7c819b11-df01-4739-ab5c-e799de604fd9">
+
+When added to our main wepage and undergoing some CSS changes, the widget looks like this:
+
+(Add screenshot of the widget here)
+
+One change made when linking this widget to the main webpage was to only show the top 10 eateries. This gives uses a quick snapshot of the top rated restaurants in their price range. Userers can now select the price range that fits their budget and get a list of the top 10 Melbourne Eateries in that filter. 
 
 **4. Gilbert’s visualisation**
 - How you did it 
