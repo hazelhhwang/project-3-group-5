@@ -14,16 +14,10 @@ document.addEventListener('DOMContentLoaded', function() {
         '1000+': 'red'
     };
 
-    // Load and parse the CSV data
-    Papa.parse('data_with_coordinates.csv', {
-        download: true,
-        header: true,
-        dynamicTyping: true,
-        skipEmptyLines: true,
-        complete: function(results) {
-            // Access the parsed data
-            var restaurantData = results.data;
-
+    // Load and parse the JSON data
+    fetch('static/data/data_with_coordinates.json')
+        .then(response => response.json())
+        .then(restaurantData => {
             // Define legend ranges and colors arrays
             var legendRanges = [];
             var legendColorsArr = [];
@@ -93,8 +87,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     legendDiv.innerHTML += `<div><i style="background:${legendColorsArr[i]}"></i>${legendRanges[i]}</div>`;
                 }
             }
-        }
-    });
+        })
+        .catch(error => console.error('Error loading JSON data:', error));
 });
+
 
 
