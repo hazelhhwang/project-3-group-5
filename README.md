@@ -57,3 +57,51 @@ To tell a compelling story of Melbourne's dining scene using data visualisations
 
 This project utilises data from [Kaggle's Top 500 Melbourne Eateries: TripAdvisor's Best](https://www.kaggle.com/datasets/kanchana1990/top-500-melbourne-eateries-tripadvisors-best).
 
+## Overview: (Marianne)
+-	What is the data
+-	Where did we get it
+-	Why did we use it
+-	How did we display our visualisations
+  
+## Cleaning the data:
+-	Getting the coordinates (Hazel/Ashrita)
+-	Getting the cuisine type (Marianne)
+-	Getting the postcode (Ashrita)
+  
+## Using SQL : (Ashrita)
+-	Why was SQL used
+-	Screenshots of queries
+
+## Making the webpage: (Hazel)
+-	How you did it
+  
+## Instructions on how to use the widgets:
+**1. Street Map (Hazel)**
+-	How you did it
+-	How to use it
+  
+**2. Cluster Map (Hazel/Gilbert)**
+- How you did it 
+- How to use it 
+
+**3. Filter function (Marianne)**
+- How you did it 
+- How to use it 
+
+**4. Gilbert’s visualisation**
+- How you did it 
+- How to use it 
+
+## Ethical Considerations (Marianne)
+In creating our project on Melbourne's dining scene, we focused on three main areas to ensure we were upholding high ethical standards, including when using data from TripAdvisor.
+
+The first was adhering to data copyright laws. When using the TripAdvisor data, we ensured our use complied with their terms of service and copyright rules. This meant we could use the data about restaurants without breaking any rules and only used the information in ways which TripAdvisor allows. Secondly, we made sure we weren’t breaching the Privacy Act 1988, which exists to protect people’s personal information. As our data only captured public information about the restaurant, and not names or personal details of people who left reviews, we believe we were able to adhere to this standard. Lastly, we took into consideration if Trip Advisor uses a fair algorithm when generating the list of top restaurants, or if it’s computer program would produce any bias that would affect the results. As the data collected is directly from people who have visited and rated the restaurant, we believe that this wouldn’t be a concern in our data set. For example, we weren’t asking trip advisor to predict what restaurants are good, but simply look for restaurants that people have rated highly themselves.
+
+By focusing on these points and ensuring our use of TripAdvisor data was responsible, respectful, fair, and within the law, we aimed to create a project that provides valuable insights into Melbourne's dining scene while adhering to ethical and legal standards.
+
+## Reference to Data
+
+This project utilises data from [Kaggle's Top 500 Melbourne Eateries: TripAdvisor's Best](https://www.kaggle.com/datasets/kanchana1990/top-500-melbourne-eateries-tripadvisors-best).
+
+## Reference to Code
+
