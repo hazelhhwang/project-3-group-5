@@ -11,6 +11,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <!-- External CSS File -->
     <link rel="stylesheet" href="static/style.css">
+    <!-- Internal CSS for custom styling -->
+    <style>
+        .section-title-custom {
+            font-size: 30px; /* Adjust the font size as needed */
+        }
+    </style>
+
 </head>
 <body>
     <h1 class="main-title">EXPLORE MELBOURNE'S DINING SCENE</h1>
@@ -20,7 +27,7 @@
     <div class="container">
         <!-- Dropdown Filter for Cuisine Type -->
         <div class="filter-container">
-            <label for="cuisine-filter">Filter by cuisine type:</label>
+            <label for="cuisine-filter">Filter by Cuisine Type:</label>
             <select id="cuisine-filter" class="cuisine-filter">
                 <option value="all">All Cuisines</option>
                 <!-- Additional options will be populated here by street-map.js -->
@@ -40,13 +47,21 @@
     </div>
 
     <!-- Restaurant List Container -->
-    <h2 class="section-title">Restaurant Listing with Filter Functions</h2>
-    <div class="container">
-        <div id="restaurantList" class="visualisation">
-            <!-- Placeholder for the Restaurant Listing visualisation -->
+    <h2 class="section-title section-title-custom">Savour Melbourne's Top 10 Restaurants by Price Level</h2>
+        <!-- Price Level Filter Dropdown -->
+        <div class="filter-container">
+            <label for="priceLevelFilter">Filter by Price Level:</label>
+            <select id="priceLevelFilter">
+                <option value="">Select Price Level</option>
+                <!-- Options will be populated dynamically by script.js -->
+            </select>
+        </div>
+        <div id="restaurantsContainer" class="visualisation" style="background-color: transparent; border: none;">
         </div>
     </div>
 
+
+    
     <!-- Leaflet JS -->
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <!-- PapaParse for CSV parsing -->
@@ -54,7 +69,7 @@
     <!-- Your custom JS for the visualisations -->
     <script src="street-map.js"></script>
     <script src="heat-map.js"></script>
-    <!-- <script src="path/to/restaurant-list.js"></script> -->
+    <script src="script.js"></script>
 </body>
 </html>
 

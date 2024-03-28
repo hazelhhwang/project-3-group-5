@@ -35,6 +35,7 @@ body {
   display: flex; /* Flexbox for alignment */
   flex-direction: column; /* Stack children elements vertically */
   align-items: center; /* Center-align the child elements */
+  position: relative; /* Ensure the container is positioned */
 }
 
 .visualisation {
@@ -75,3 +76,5 @@ body {
   border: 1px solid #ccc;
   border-radius: 50%;
 }
+
+
