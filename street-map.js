@@ -62,6 +62,6 @@ document.addEventListener('DOMContentLoaded', function() {
         filterMarkers(e.target.value);
     });
 
-    fetchCSVData('updated_reviews1.csv'); 
+    fetchCSVData('data_with_coordinates.csv'); 
 });
 
