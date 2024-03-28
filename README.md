@@ -95,11 +95,11 @@ We also decided to add the cusine type for each restaurant into our csv file, as
 - How you did it 
 - How to use it 
 
-**3. Filter function (Marianne)**
+## 3. Filtering Eateries by Price (Marianne)
 
 To enhance user interaction with Melbourne's top 500 eateries, we implemented a price filter widget, allowing users to explore restaurants based on their price level. This widget was developed using JavaScript and integrated with a JSON dataset, which was converted from the original CSV file. The JavaScript fetch API was utilized to asynchronously retrieve the dataset, ensuring the page remains responsive while loading the data.
 
-Step 1: Fetching and Processing Data
+**Step 1: Fetching and Processing Data**
 
 The initial step involves fetching the restaurant data from a JSON file using the Fetch API. Upon successful retrieval, the data is processed to populate the price filter dropdown and display the restaurant listings.
 
@@ -107,7 +107,7 @@ The initial step involves fetching the restaurant data from a JSON file using th
 
 This block waits for the document content to fully load and then attempts to fetch the restaurant data. Once the data is fetched and converted to JSON format, two functions are called: one to populate the price level dropdown and another to initially display all restaurants.
 
-Step 2: Populating the Dropdown
+**Step 2: Populating the Dropdown**
 
 The populatePriceLevelDropdown function is responsible for creating unique dropdown options based on the priceLevel properties found in the dataset. It employs a custom sort order to ensure the price levels are displayed logically from lowest to highest.
 
@@ -115,13 +115,13 @@ The populatePriceLevelDropdown function is responsible for creating unique dropd
 
 This function first creates a unique set of price levels, sorts them according to a predefined order, and then dynamically adds these options to the dropdown menu in the HTML document.
 
-Step 3: Displaying Restaurants
+**Step 3: Displaying Restaurants**
 
 The displayRestaurants function shows restaurants on the page, filtering them based on the selected price level if any. It starts by filtering the dataset to match the selected price level, sorts the filtered results by the number of reviews (indicating popularity), and then dynamically creates HTML elements to display the filtered restaurant data.
 
 <img width="516" alt="image" src="https://github.com/hazelhhwang/project-3-group-5/assets/150411822/032e8f05-64be-4cbf-b2d6-525fa25d87f4">
 
-Step 4: Handling User Input
+**Step 4: Handling User Input**
 
 Lastly, an event listener is added to the dropdown menu to respond to user selections. When a new price level is selected, it fetches the data again (though, ideally, it should use the already loaded data to avoid unnecessary network requests) and displays the restaurants according to the selected price level.
 
