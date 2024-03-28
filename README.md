@@ -68,14 +68,16 @@ We made our visualisations using JavaScript, and have displayed 4 different widg
 -	The diversity of cuisine types across Melbourne, highlighting areas with a high concentration of particular cuisines.
 -	Pricing levels of eateries, helping users find options that fit their budget.
 -	Geographic distribution of restaurants, bars, and cafes, allowing users to discover popular spots in specific suburbs or neighbourhoods.
+-	Popularity and quality indicators based on user reviews and ratings, guiding users towards highly recommended dining experiences.
 
 We believe we have curated a user-friendly experience which will give curious Melbourne foodies great insights into where they should explore next.  
 
   
 ## Cleaning the data:
 -	Getting the coordinates (Hazel/Ashrita)
--	Getting the cuisine type (Marianne)
 -	Getting the postcode (Ashrita)
+
+We also decided to add the cusine type for each restaurant into our csv file, as we believed this would be interesting and relevant information to our webpage users. Our team split the data set into 4 and were each allocated a range of restaurants to investigate. We manually searched for the cusine type on Trip Advisor and added it to our data set. 
   
 ## Using SQL : (Ashrita)
 -	Why was SQL used
