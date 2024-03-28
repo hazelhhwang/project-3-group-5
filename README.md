@@ -58,10 +58,19 @@ To tell a compelling story of Melbourne's dining scene using data visualisations
 This project utilises data from [Kaggle's Top 500 Melbourne Eateries: TripAdvisor's Best](https://www.kaggle.com/datasets/kanchana1990/top-500-melbourne-eateries-tripadvisors-best).
 
 ## Overview: (Marianne)
--	What is the data
--	Where did we get it
--	Why did we use it
--	How did we display our visualisations
+
+Melbourne is famous for its food culture. People travel to Melbourne just to experience all the amazing restaurants, bars, and cafes it has on offer. With such an abundance of choices, deciding where to dine can often feel overwhelming. To address this, our team has developed a user-friendly webpage designed to simplify these decisions for both locals and tourists alike.
+
+We did this by utilising Trip Adviser data from Kaggle with information about the “Top 500 Melbourne Eateries”. This data set had information about name, price, address, number of reviews, and rating. 
+
+We made our visualisations using JavaScript, and have displayed 4 different widgets on a webpage for users to explore. These visualizations are not just about presenting data; they are carefully designed to provide insights such as:
+
+-	The diversity of cuisine types across Melbourne, highlighting areas with a high concentration of particular cuisines.
+-	Pricing levels of eateries, helping users find options that fit their budget.
+-	Geographic distribution of restaurants, bars, and cafes, allowing users to discover popular spots in specific suburbs or neighbourhoods.
+
+We believe we have curated a user-friendly experience which will give curious Melbourne foodies great insights into where they should explore next.  
+
   
 ## Cleaning the data:
 -	Getting the coordinates (Hazel/Ashrita)
