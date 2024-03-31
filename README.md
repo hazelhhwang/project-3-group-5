@@ -57,3 +57,140 @@ To tell a compelling story of Melbourne's dining scene using data visualisations
 
 This project utilises data from [Kaggle's Top 500 Melbourne Eateries: TripAdvisor's Best](https://www.kaggle.com/datasets/kanchana1990/top-500-melbourne-eateries-tripadvisors-best).
 
+## Overview: (Marianne)
+
+Melbourne is famous for its food culture. People travel to Melbourne just to experience all the amazing restaurants, bars, and cafes it has on offer. With such an abundance of choices, deciding where to dine can often feel overwhelming. To address this, our team has developed a user-friendly webpage designed to simplify these decisions for both locals and tourists alike.
+
+We did this by utilising Trip Adviser data from Kaggle with information about the “Top 500 Melbourne Eateries”. This data set had information about name, price, address, number of reviews, and rating. 
+
+We made our visualisations using JavaScript, and have displayed 4 different widgets on a webpage for users to explore. These visualizations are not just about presenting data; they are carefully designed to provide insights such as:
+
+-	The diversity of cuisine types across Melbourne, highlighting areas with a high concentration of particular cuisines.
+-	Pricing levels of eateries, helping users find options that fit their budget.
+-	Geographic distribution of restaurants, bars, and cafes, allowing users to discover popular spots in specific suburbs or neighbourhoods.
+-	Popularity and quality indicators based on user reviews and ratings, guiding users towards highly recommended dining experiences.
+
+We believe we have curated a user-friendly experience which will give curious Melbourne foodies great insights into where they should explore next.  
+
+  
+## Cleaning the data:
+-	Getting the coordinates (Hazel/Ashrita)
+-	Getting the postcode (Hazel)
+
+Initially, we utilised Geoapify for obtaining latitude and longitude data. Even though we were able to get the required data, as our project progressed, we realised that Geoapify's accuracy did not meet our requirements for creating data visualisations. Consequently, we transitioned to the Google API to generate the visualisations.
+
+We also decided to add the cusine type for each restaurant into our csv file, as we believed this would be interesting and relevant information to our webpage users. Our team split the data set into 4 and were each allocated a range of restaurants to investigate. We manually searched for the cusine type on Trip Advisor and added it to our data set. 
+  
+## Using Database(PostgreSQL) - Ashrita
+
+**Why PostgreSQL?**
+
+The data utilised in this project is organised in a structured format, with all information contained within a single table and the relational structure is straightforward. Also, there is no need for extensive Create, Read, Update, Delete (CRUD) operations in the later stages of the project. Therefore, we chose PostgreSQL.
+
+**Actions performed in PostgreSQL**
+  
+Initially, created a database called *Melb_restaurant_reviews* and then a table called *restaurant_reviews* using CREATE TABLE function.
+We have then imported the csv file into the table. All SQL queries pertaining to this process can be found in the updated_reviews.sql file, structured to retrieve the following information:
+
+  1. Average rating of each cuisine type and number of restaurants for each cuisine in Melbourne - output is    saved in a csv file as PostgreSQL doesn't offer an option to save the output in the image format.
+
+  2. Average price level of each cuisine type - Output is saved in the csv file
+
+  3. Number of restaurants in each price level
+
+  ![alt text](<PriceLevel-no.of restaurants-1.png>)
+
+  4. Top rated restaurants in Melbourne CBD
+
+  ![alt text](top_rated_rest_cbd.png)
+
+  5. Top 10 restaurants with highest number of reviews and the highest rating
+
+  ![alt text](Top_10_rest_max_reviews_max_rating.png)
+
+
+## Data Analysis - Observations and Limitations (Ashrita)
+
+**Observations**
+- With the highest number of reviews, it can be concluded that Thai cuisine is the most popular cuisine in Melbourne with garnering 6029 reviews.
+- Italian cuisine leads in terms of the number of restaurants in Melbourne, boasting an average rating of 4.3.
+- An examination of the price levels reveals that 55 restaurants fall into the lowest price bracket, indicating affordability, while 382 establishments are situated in the mid-range, offering a balance between budget-friendliness and luxury. Additionally, 58 restaurants are classified as expensive.
+- An analysis of the top-rated restaurants in Melbourne's CBD shows that 50% of them are Italian, all earning a perfect rating of 5.
+- Among the top 10 restaurants in Melbourne with the highest number of reviews and the highest rating, Thai cuisine represents 30% of the establishments.
+
+**Limitations**
+- The accuracy of the data might vary as there might be a few restaurants that are closed or opened after the data was collected
+-	The dataset provides restaurant information at a particular point in time and may not reflect changes in ratings, reviews, or restaurant offerings over time.
+-	Ratings are subjective and can be influenced by various factors such as individual preferences, biases, and experiences, which may not accurately reflect the quality of a restaurant.
+
+
+## Making the webpage: (Hazel)
+-	How you did it
+  
+## Instructions on how to use the widgets:
+**1. Street Map (Hazel)**
+-	How you did it
+-	How to use it
+  
+**2. Cluster Map (Hazel/Gilbert)**
+- How you did it 
+- How to use it 
+
+## 3. Filtering Eateries by Price (Marianne)
+
+To enhance user interaction with Melbourne's top 500 eateries, we implemented a price filter widget, allowing users to explore restaurants based on their price level. This widget was developed using JavaScript and integrated with a JSON dataset, which was converted from the original CSV file. The JavaScript fetch API was utilized to asynchronously retrieve the dataset, ensuring the page remains responsive while loading the data.
+
+**Step 1: Fetching and Processing Data**
+
+The initial step involves fetching the restaurant data from a JSON file using the Fetch API. Upon successful retrieval, the data is processed to populate the price filter dropdown and display the restaurant listings.
+
+<img width="538" alt="image" src="https://github.com/hazelhhwang/project-3-group-5/assets/150411822/b7ab3b6f-8fe8-4da1-97ba-931aef2c6b63">
+
+
+This block waits for the document content to fully load and then attempts to fetch the restaurant data. Once the data is fetched and converted to JSON format, two functions are called: one to populate the price level dropdown and another to initially display all restaurants.
+
+**Step 2: Populating the Dropdown**
+
+The populatePriceLevelDropdown function is responsible for creating unique dropdown options based on the priceLevel properties found in the dataset. It employs a custom sort order to ensure the price levels are displayed logically from lowest to highest.
+
+<img width="438" alt="image" src="https://github.com/hazelhhwang/project-3-group-5/assets/150411822/b6b31ede-8560-49a0-abb0-da3e64e7d8eb">
+
+
+This function first creates a unique set of price levels, sorts them according to a predefined order, and then dynamically adds these options to the dropdown menu in the HTML document.
+
+**Step 3: Displaying Restaurants**
+
+The displayRestaurants function shows restaurants on the page, filtering them based on the selected price level if any. It starts by filtering the dataset to match the selected price level, sorts the filtered results by the number of reviews (indicating popularity), and then dynamically creates HTML elements to display the filtered restaurant data.
+
+<img width="508" alt="image" src="https://github.com/hazelhhwang/project-3-group-5/assets/150411822/823d8531-16b9-4453-aee2-c2b348396077">
+
+
+**Step 4: Handling User Input**
+
+Lastly, an event listener is added to the dropdown menu to respond to user selections. When a new price level is selected, it fetches the data again (though, ideally, it should use the already loaded data to avoid unnecessary network requests) and displays the restaurants according to the selected price level.
+
+<img width="620" alt="image" src="https://github.com/hazelhhwang/project-3-group-5/assets/150411822/3bfd725e-0417-4cd3-a48d-d481fd787015">
+
+When added to our main wepage and undergoing some CSS changes, the widget looks like this:
+
+**(Add screenshot of the widget here)**
+
+One change made when linking this widget to the main webpage was to only show the top 10 eateries. This gives uses a quick snapshot of the top rated restaurants in their price range. Userers can now select the price range that fits their budget and get a list of the top 10 Melbourne Eateries in that filter. 
+
+**4. Gilbert’s visualisation**
+- How you did it 
+- How to use it 
+
+## Ethical Considerations (Marianne)
+In creating our project on Melbourne's dining scene, we focused on three main areas to ensure we were upholding high ethical standards, including when using data from TripAdvisor.
+
+The first was adhering to data copyright laws. When using the TripAdvisor data, we ensured our use complied with their terms of service and copyright rules. This meant we could use the data about restaurants without breaking any rules and only used the information in ways which TripAdvisor allows. Secondly, we made sure we weren’t breaching the Privacy Act 1988, which exists to protect people’s personal information. As our data only captured public information about the restaurant, and not names or personal details of people who left reviews, we believe we were able to adhere to this standard. Lastly, we took into consideration if Trip Advisor uses a fair algorithm when generating the list of top restaurants, or if it’s computer program would produce any bias that would affect the results. As the data collected is directly from people who have visited and rated the restaurant, we believe that this wouldn’t be a concern in our data set. For example, we weren’t asking trip advisor to predict what restaurants are good, but simply look for restaurants that people have rated highly themselves.
+
+By focusing on these points and ensuring our use of TripAdvisor data was responsible, respectful, fair, and within the law, we aimed to create a project that provides valuable insights into Melbourne's dining scene while adhering to ethical and legal standards.
+
+## Reference to Data
+
+This project utilises data from [Kaggle's Top 500 Melbourne Eateries: TripAdvisor's Best](https://www.kaggle.com/datasets/kanchana1990/top-500-melbourne-eateries-tripadvisors-best).
+
+## Reference to Code
+
