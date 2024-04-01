@@ -77,11 +77,55 @@ We believe we have curated a user-friendly experience which will give curious Me
 -	Getting the coordinates (Hazel/Ashrita)
 -	Getting the postcode (Hazel)
 
-We also decided to add the cuisine type for each restaurant into our csv file, as we believed this would be interesting and relevant information to our webpage users. Our team split the data set into 4 and were each allocated a range of restaurants to investigate. We manually searched for the cusine type on Trip Advisor and added it to our data set. 
+Initially, we utilised Geoapify to obtain latitude and longitude data. Even though we were able to get the required data, as our project progressed, we realised that Geoapify's accuracy did not meet our requirements for creating data visualisations. Consequently, we transitioned to the Google API to generate the visualisations.
+
+We also decided to add the cuisine type for each restaurant into our CSV file, as we believed this would be interesting and relevant information to our webpage users. Our team split the data set into 4 and were each allocated a range of restaurants to investigate. We manually searched for the cuisine type on Trip Advisor and added it to our data set. 
   
-## Using SQL : (Ashrita)
--	Why was SQL used
--	Screenshots of queries
+## Using Database(PostgreSQL) - Ashrita
+
+**Why PostgreSQL?**
+
+The data utilised in this project is organised in a structured format, with all information contained within a single table and the relational structure is straightforward. Also, there is no need for extensive Create, Read, Update, Delete (CRUD) operations in the later stages of the project. Therefore, we chose PostgreSQL.
+
+**Actions performed in PostgreSQL**
+  
+Initially, created a database called *Melb_restaurant_reviews* and then a table called *restaurant_reviews* using CREATE TABLE function.
+We have then imported the csv file into the table. All SQL queries can be found in the restaurant_reviews_updated.sql file, structured to retrieve the following information:
+
+1. Average rating of each cuisine type and number of restaurants for each cuisine in Melbourne
+   
+<img width="724" alt="cuisinetype_avgrating_no of_rest" src="https://github.com/hazelhhwang/project-3-group-5/assets/147963279/9c520ec3-b3c0-4391-bcb9-0c12b0526c63">
+
+2. Average price level of each cuisine type
+
+<img width="728" alt="cuisinetype_Avg_price" src="https://github.com/hazelhhwang/project-3-group-5/assets/147963279/9f4a29f7-74a9-4d94-a2fe-971a384bad2f">
+
+
+3. Number of restaurants in each price level
+
+<img width="165" alt="PriceLevel-no of restaurants" src="https://github.com/hazelhhwang/project-3-group-5/assets/147963279/246c814e-7832-4c89-af6d-33b4fcce63f8">
+
+4. Top-rated restaurants in Melbourne CBD
+
+<img width="626" alt="top_rated_rest_cbd" src="https://github.com/hazelhhwang/project-3-group-5/assets/147963279/2d629bb3-dfeb-4091-bd31-d16be2103cfb">
+
+5. Top 10 restaurants with the highest number of reviews and the highest rating
+
+<img width="518" alt="Top_10_rest_max_reviews_max_rating" src="https://github.com/hazelhhwang/project-3-group-5/assets/147963279/4fe73aa7-aab1-43f5-91c8-d6e20651ca1b">
+
+## Data Analysis - Observations and Limitations (Ashrita)
+
+**Observations**
+- With the highest number of reviews, it can be concluded that Thai cuisine is the most popular cuisine in Melbourne with 6029 reviews.
+- Italian cuisine leads in terms of the number of restaurants in Melbourne, boasting an average rating of 4.3.
+- An examination of the price levels reveals that 55 restaurants fall into the lowest price bracket, indicating affordability, while 382 establishments are situated in the mid-range, offering a balance between budget-friendliness and luxury. Additionally, 58 restaurants are classified as expensive.
+- An analysis of the top-rated restaurants in Melbourne's CBD shows that 50% of them are Italian, all earning a perfect rating of 5.
+- Among the top 10 restaurants in Melbourne with the highest number of reviews and the highest rating, Thai cuisine represents 30% of the establishments.
+
+**Limitations**
+- The accuracy of the data might vary as there might be a few restaurants that were closed or opened after the data was collected
+-	The dataset provides restaurant information at a particular point in time and may not reflect changes in ratings, reviews, or restaurant offerings over time.
+-	Ratings are subjective and can be influenced by various factors such as individual preferences, biases, and experiences, which may not accurately reflect the quality of a restaurant.
 
 ## Making the webpage: (Hazel)
 -	How you did it
