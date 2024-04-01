@@ -77,7 +77,7 @@ We believe we have curated a user-friendly experience which will give curious Me
 -	Getting the coordinates (Hazel/Ashrita)
 -	Getting the postcode (Hazel)
 
-We also decided to add the cusine type for each restaurant into our csv file, as we believed this would be interesting and relevant information to our webpage users. Our team split the data set into 4 and were each allocated a range of restaurants to investigate. We manually searched for the cusine type on Trip Advisor and added it to our data set. 
+We also decided to add the cuisine type for each restaurant into our csv file, as we believed this would be interesting and relevant information to our webpage users. Our team split the data set into 4 and were each allocated a range of restaurants to investigate. We manually searched for the cusine type on Trip Advisor and added it to our data set. 
   
 ## Using SQL : (Ashrita)
 -	Why was SQL used
