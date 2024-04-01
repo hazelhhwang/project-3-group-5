@@ -91,9 +91,13 @@ We also decided to add the cusine type for each restaurant into our csv file, as
 -	How you did it
 -	How to use it
   
-**2. Cluster Map (Hazel/Gilbert)**
+**2. Cluster Map (Hazel)**
 - How you did it 
-- How to use it 
+- How to use it
+
+**3. Heat Map (Gilbert)**
+- How you did it
+- How to use it
 
 ## 3. Filtering Eateries by Price (Marianne)
 
