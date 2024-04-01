@@ -9,11 +9,12 @@ CREATE TABLE restaurant_reviews (
 	priceLevel VARCHAR(15),
 	category VARCHAR(30),
 	rating FLOAT,
-	address TEXT,
+	address TEXT PRIMARY KEY,
 	numberOfReviews INT,
 	latitude FLOAT,
 	longitude FLOAT,
-	postcode NUMERIC
+	postcode NUMERIC, 
+	
 	);
 	
 -- View table columns and datatypes
