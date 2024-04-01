@@ -99,7 +99,7 @@ We also decided to add the cusine type for each restaurant into our csv file, as
 - How you did it
 - How to use it
 
-## 3. Filtering Eateries by Price (Marianne)
+## 4. Filtering Eateries by Price (Marianne)
 
 To enhance user interaction with Melbourne's top 500 eateries, we implemented a price filter widget, allowing users to explore restaurants based on their price level. This widget was developed using JavaScript and integrated with a JSON dataset, which was converted from the original CSV file. The JavaScript fetch API was utilized to asynchronously retrieve the dataset, ensuring the page remains responsive while loading the data.
 
@@ -140,9 +140,6 @@ When added to our main wepage and undergoing some CSS changes, the widget looks 
 
 One change made when linking this widget to the main webpage was to only show the top 10 eateries. This gives uses a quick snapshot of the top rated restaurants in their price range. Userers can now select the price range that fits their budget and get a list of the top 10 Melbourne Eateries in that filter. 
 
-**4. Gilbert’s visualisation**
-- How you did it 
-- How to use it 
 
 ## Ethical Considerations (Marianne)
 In creating our project on Melbourne's dining scene, we focused on three main areas to ensure we were upholding high ethical standards, including when using data from TripAdvisor.
