@@ -339,6 +339,8 @@ This project utilises data from [Kaggle's Top 500 Melbourne Eateries: TripAdviso
 - DOM Manipulation (The process of dynamically interacting with the Document Object Model (DOM) to update and modify webpage content)
 - Event Listeners (Components responsible for detecting and responding to user actions or changes in the DOM, enabling interactive functionality on webpages)
 - Fetch API (Web API for making asynchronous HTTP requests)
+- Geoapify (for coordinates)
+- Google API (for coordinates)
 - Google Fonts (External fonts: Rubik Doodle Shadow & Rubik)
 - JavaScript (Programming language used for DOM manipulation, event handling, and data processing)
 - jQuery (JavaScript library for simplifying HTML DOM tree traversal and manipulation)
