@@ -123,10 +123,9 @@ We have then imported the csv file into the table. All SQL queries can be found 
 - Among the top 10 restaurants in Melbourne with the highest number of reviews and the highest rating, Thai cuisine represents 30% of the establishments.
 
 **Limitations**
-- The data spans from April 2, 2004 to January 16, 2024 and its accuracy may vary due to potential changes in restaurant statuses, such as openings or closures, occurring after data collection.
+- The accuracy of the data might vary as there might be a few restaurants that were closed or opened after the data was collected
 -	The dataset provides restaurant information at a particular point in time and may not reflect changes in ratings, reviews, or restaurant offerings over time.
 -	Ratings are subjective and can be influenced by various factors such as individual preferences, biases, and experiences, which may not accurately reflect the quality of a restaurant.
--	The cuisine types were added manually to the CSV file by referencing TripAdvisor, indicating potential inaccuracies in the provided information and the possibility of variations from other websites.
 
 ## Creating the webpage: (Hazel)
 
