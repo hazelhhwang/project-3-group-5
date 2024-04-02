@@ -277,8 +277,11 @@ Users can interact with the Cluster Map widget in the following ways:
 
 
 
-**3. Heat Map (Gilbert)**
-- How you did it
+## 3. Maps and Charts (Gilbert) 
+Maps were produced using libraries that were not covered in the class, namely, Folium and Geoplotlib. Meanwhile, the charts were done through Matplotlib, Seaborn, Pair Plot, and Pyplot. 
+- The Dot Map was coded in Jupyter Notebook utilising a GeoJSON file and Geoplotlib to plot a Dot Map, a crude presentation of every point of each restaurant in the greater Melbourne area. This elementary visualisation provides an immediate idea of the relative or absolute location of the eateries. It identifies the zones with lower or higher density and gives a "bird's eye view" of the points in considertion. 
+- Likewise, the Heat Map was done using Jupyter Notebook and Folium which is a Pyhton wrapper for Leaflet.js. which is simple to use for creating maps making it behave in many ways as Leaflet would.
+-   
 - How to use it
 
 ## 4. Filtering Eateries by Price (Marianne)
