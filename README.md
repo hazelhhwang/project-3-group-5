@@ -164,7 +164,7 @@ This provides a step-by-step guide on how the `index.html` file for Project 3: D
    - Included default options and placeholders within the dropdown menus.
 
 7. **Map Containers**:
-   - Created div elements (`<div id="streetMap" class="visualisation">` and `<div id="heatMap" class="visualisation">`) to serve as containers for the street map and cluster map visualisations, respectively.
+   - Created div elements (`<div id="streetMap" class="visualisation">` and `<div id="clusterMap" class="visualisation">`) to serve as containers for the street map and cluster map visualisations, respectively.
    - Included placeholders for map visualisations.
 
 8. **Restaurant List**:
@@ -238,7 +238,7 @@ This outlines the process of creating the `cluster-map.js` file.
 
 2. **Leaflet Map Initialisation**:
    - Initialised a Leaflet map instance with the ID 'clusterMap' and set the initial view coordinates to Melbourne's latitude and longitude using `L.map('heatMap').setView([-37.8136, 144.9631], 13);`.
-   - Added a tile layer from OpenStreetMap as the base layer using `L.tileLayer(...).addTo(heatMap)`.
+   - Added a tile layer from OpenStreetMap as the base layer using `L.tileLayer(...).addTo(clusterMap)`.
 
 3. **Definition of Legend Colours**:
    - Defined a colour scheme for the legend by specifying ranges of the number of reviews and their corresponding colours in the `legendColors` object.
