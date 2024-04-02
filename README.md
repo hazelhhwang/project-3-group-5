@@ -63,7 +63,7 @@ Melbourne is famous for its food culture. People travel to Melbourne just to exp
 
 We did this by utilising Trip Adviser data from Kaggle with information about the “Top 500 Melbourne Eateries”. This data set had information about name, price, address, number of reviews, and rating. 
 
-We made our visualisations using JavaScript, and have displayed 4 different widgets on a webpage for users to explore. These visualizations are not just about presenting data; they are carefully designed to provide insights such as:
+We made our visualisations using JavaScript, and have displayed 4 different widgets on a webpage for users to explore. These visualisations are not just about presenting data; they are carefully designed to provide insights such as:
 
 -	The diversity of cuisine types across Melbourne, highlighting areas with a high concentration of particular cuisines.
 -	Pricing levels of eateries, helping users find options that fit their budget.
@@ -164,7 +164,7 @@ This provides a step-by-step guide on how the `index.html` file for Project 3: D
    - Included default options and placeholders within the dropdown menus.
 
 7. **Map Containers**:
-   - Created div elements (`<div id="streetMap" class="visualisation">` and `<div id="heatMap" class="visualisation">`) to serve as containers for the street map and cluster map visualisations, respectively.
+   - Created div elements (`<div id="streetMap" class="visualisation">` and `<div id="clusterMap" class="visualisation">`) to serve as containers for the street map and cluster map visualisations, respectively.
    - Included placeholders for map visualisations.
 
 8. **Restaurant List**:
@@ -237,8 +237,8 @@ This outlines the process of creating the `cluster-map.js` file.
    - Added an event listener to wait for the DOM content to be fully loaded before executing the script using `document.addEventListener('DOMContentLoaded', function() {...});`.
 
 2. **Leaflet Map Initialisation**:
-   - Initialised a Leaflet map instance with the ID 'clusterMap' and set the initial view coordinates to Melbourne's latitude and longitude using `L.map('heatMap').setView([-37.8136, 144.9631], 13);`.
-   - Added a tile layer from OpenStreetMap as the base layer using `L.tileLayer(...).addTo(heatMap)`.
+   - Initialised a Leaflet map instance with the ID 'clusterMap' and set the initial view coordinates to Melbourne's latitude and longitude using `L.map('clusterMap').setView([-37.8136, 144.9631], 13);`.
+   - Added a tile layer from OpenStreetMap as the base layer using `L.tileLayer(...).addTo(clusterMap)`.
 
 3. **Definition of Legend Colours**:
    - Defined a colour scheme for the legend by specifying ranges of the number of reviews and their corresponding colours in the `legendColors` object.
