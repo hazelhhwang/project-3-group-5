@@ -120,7 +120,7 @@ We have then imported the csv file into the table. All SQL queries can be found 
 - Italian cuisine leads in terms of the number of restaurants in Melbourne, boasting an average rating of 4.3.
 - An examination of the price levels reveals that 55 restaurants fall into the lowest price bracket, indicating affordability, while 382 establishments are situated in the mid-range, offering a balance between budget-friendliness and luxury. Additionally, 58 restaurants are classified as expensive.
 - An analysis of the top-rated restaurants in Melbourne's CBD shows that 50% of them are Italian, all earning a perfect rating of 5.
-- Among the top 10 restaurants in Melbourne with the highest number of reviews and the highest rating, Thai cuisine represents 30% of the establishments.
+- Among the top 10 restaurants in Melbourne with the highest number of reviews and the highest rating, Thai cuisine represents 30% 
 
 **Limitations**
 - The accuracy of the data might vary as there might be a few restaurants that were closed or opened after the data was collected
