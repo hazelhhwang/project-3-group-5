@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
-    var heatMap = L.map('heatMap').setView([-37.8136, 144.9631], 13);
+    var clusterMap = L.map('clusterMap').setView([-37.8136, 144.9631], 13);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
         attribution: '© OpenStreetMap contributors'
-    }).addTo(heatMap);
+    }).addTo(clusterMap);
 
     // Define color scheme for the legend
     var legendColors = {
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Create marker for each restaurant
                 var marker = L.circleMarker([latitude, longitude], markerStyle)
                     .bindPopup(`<b>${name}</b><br>${cuisineType}<br>Reviews: ${numberOfReviews}`)
-                    .addTo(heatMap);
+                    .addTo(clusterMap);
             });
 
             // Populate legend arrays
@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
                 return div;
             };
-            legend.addTo(heatMap);
+            legend.addTo(clusterMap);
 
             // Function to update the legend
             function updateLegend() {
