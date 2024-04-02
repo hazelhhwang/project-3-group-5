@@ -197,4 +197,14 @@ By focusing on these points and ensuring our use of TripAdvisor data was respons
 This project utilises data from [Kaggle's Top 500 Melbourne Eateries: TripAdvisor's Best](https://www.kaggle.com/datasets/kanchana1990/top-500-melbourne-eateries-tripadvisors-best).
 
 ## Reference to Code
-
+- Bootstrap (HTML, CSS, and JavaScript framework for developing responsive and mobile-first websites)
+- Chat GPT
+- DOM Manipulation (The process of dynamically interacting with the Document Object Model (DOM) to update and modify webpage content)
+- Event Listeners (Components responsible for detecting and responding to user actions or changes in the DOM, enabling interactive functionality on webpages)
+- Fetch API (Web API for making asynchronous HTTP requests)
+- Google Fonts (External fonts: Rubik Doodle Shadow & Rubik)
+- JavaScript (Programming language used for DOM manipulation, event handling, and data processing)
+- jQuery (JavaScript library for simplifying HTML DOM tree traversal and manipulation)
+- Leaflet.awesome-markers (Leaflet plugin for adding colorful iconic markers)
+- Leaflet.heat (Leaflet plugin for adding heatmaps)
+- Leaflet.js (JavaScript library for interactive maps)
