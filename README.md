@@ -237,7 +237,7 @@ This outlines the process of creating the `cluster-map.js` file.
    - Added an event listener to wait for the DOM content to be fully loaded before executing the script using `document.addEventListener('DOMContentLoaded', function() {...});`.
 
 2. **Leaflet Map Initialisation**:
-   - Initialised a Leaflet map instance with the ID 'clusterMap' and set the initial view coordinates to Melbourne's latitude and longitude using `L.map('heatMap').setView([-37.8136, 144.9631], 13);`.
+   - Initialised a Leaflet map instance with the ID 'clusterMap' and set the initial view coordinates to Melbourne's latitude and longitude using `L.map('clusterMap').setView([-37.8136, 144.9631], 13);`.
    - Added a tile layer from OpenStreetMap as the base layer using `L.tileLayer(...).addTo(clusterMap)`.
 
 3. **Definition of Legend Colours**:
