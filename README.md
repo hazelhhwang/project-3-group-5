@@ -351,10 +351,6 @@ Lastly, an event listener is added to the dropdown menu to respond to user selec
 
 <img width="620" alt="image" src="https://github.com/hazelhhwang/project-3-group-5/assets/150411822/3bfd725e-0417-4cd3-a48d-d481fd787015">
 
-When added to our main wepage and undergoing some CSS changes, the widget looks like this:
-
-**(Add screenshot of the widget here)**
-
 One change made when linking this widget to the main webpage was to only show the top 10 eateries. This gives uses a quick snapshot of the top rated restaurants in their price range. Userers can now select the price range that fits their budget and get a list of the top 10 Melbourne Eateries in that filter. 
 
 
