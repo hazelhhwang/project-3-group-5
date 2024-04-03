@@ -281,7 +281,10 @@ Users can interact with the Cluster Map widget in the following ways:
 Maps were produced using libraries that were not covered in the class, namely, Folium and Geoplotlib. Meanwhile, the charts were done through Matplotlib, Seaborn, Pair Plot, and Pyplot. 
 - The Dot Map was coded in Jupyter Notebook utilising a GeoJSON file and Geoplotlib to plot a Dot Map, a crude presentation of every point of each restaurant in the greater Melbourne area. This elementary visualisation provides an immediate idea of the relative or absolute location of the eateries. It identifies the zones with lower or higher density and gives a "bird's eye view" of the points in considertion. 
 - Likewise, the Heat Map was done using Jupyter Notebook and Folium which is a Pyhton wrapper for Leaflet.js. which is simple to use for creating maps making it behave in many ways as Leaflet would.
--   
+- Another map showed the Ranking Position of each eatery relative to where it is located in Melbourne. Most of the high ranking ones are located the outskirts of the CBD while the lower ranking ones tend to congregate in the city proper.  
+- The bar charts were done using Matplotlib with Seaborn, Pyplot, and Pair Plot APIs. The date were extracted from the CSVs gathered from PostgreSQL results.
+-  
+-
 - How to use it
 
 ## 4. Filtering Eateries by Price (Marianne)
