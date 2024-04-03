@@ -278,14 +278,43 @@ Users can interact with the Cluster Map widget in the following ways:
 
 
 ## 3. Maps and Charts (Gilbert) 
-Maps were produced using libraries that were not covered in the class, namely, Folium and Geoplotlib. Meanwhile, the charts were done through Matplotlib, Seaborn, Pair Plot, and Pyplot. 
-- The Dot Map was coded in Jupyter Notebook utilising a GeoJSON file and Geoplotlib to plot a Dot Map, a crude presentation of every point of each restaurant in the greater Melbourne area. This elementary visualisation provides an immediate idea of the relative or absolute location of the eateries. It identifies the zones with lower or higher density and gives a "bird's eye view" of the points in considertion. 
-- Likewise, the Heat Map was done using Jupyter Notebook and Folium which is a Pyhton wrapper for Leaflet.js. which is simple to use for creating maps making it behave in many ways as Leaflet would.
-- Another map showed the Ranking Position of each eatery relative to where it is located in Melbourne. Most of the high ranking ones are located the outskirts of the CBD while the lower ranking ones tend to congregate in the city proper.  
-- The bar charts were done using Matplotlib with Seaborn, Pyplot, and Pair Plot APIs. The date were extracted from the CSVs gathered from PostgreSQL results.
--  
--
-- How to use it
+**Maps were produced using libraries that were not covered in the class, namely, Folium and Geoplotlib. Meanwhile, the charts were done through Matplotlib, Seaborn, Pair Plot, and Pyplot.**
+
+- The Dot Map was coded in Jupyter Notebook utilising a GeoJSON file and Geoplotlib to plot a Dot Map, a crude presentation of every point of each restaurant in the greater Melbourne area. This elementary visualisation provides an immediate idea of the relative or absolute location of the eateries. It identifies the zones with lower or higher density and gives a "bird's eye view" of the points in considertion. However, when using longitude and latitude it is necessary to use 'lon' and 'lat' instead. Using Geoplotlib was also as straight forward as reading the file and then plotting the map.
+  
+ ![Screenshot 2024-04-03 at 4 10 13 pm](https://github.com/hazelhhwang/project-3-group-5/assets/152139070/9676f88e-2dc4-4c4c-875a-afe4fcc7a592)
+
+
+- Likewise, the Heat Map was done using Jupyter Notebook and Folium which is a Pyhton wrapper for Leaflet.js. which is simple to use for creating maps making it behave in many ways as Leaflet would. Tile layers were also incorporated in the map.
+- Another map showed the Ranking Position of each eatery relative to where it is located in Melbourne. Most of the high ranking ones are located the outskirts of the CBD while the lower ranking ones tend to congregate in the city proper.
+- Links where placed in the webpage to access the Heat Map and Ranking Position Map as these were coded in Jupyter Notebook and HTML.
+
+**Step 1: Importing Dependencies**
+  
+ ![foliom import](https://github.com/hazelhhwang/project-3-group-5/assets/152139070/ac8a93f2-4b6c-4659-a4e6-f9a038d85093)
+
+**Step 2: Reading the CSV file**
+ 
+![Screenshot 2024-04-03 at 4 35 02 pm](https://github.com/hazelhhwang/project-3-group-5/assets/152139070/543ddf73-0923-409c-92ac-ab04f8df7b2d)
+
+**Step 3: Creating the map, converting data, and create heat map layer** 
+
+![Screenshot 2024-04-03 at 4 36 42 pm](https://github.com/hazelhhwang/project-3-group-5/assets/152139070/56b321f2-e067-4364-b52f-8a0f8f59cfca)
+
+- Options for other tile layers were placed.
+   
+![TileLayers](https://github.com/hazelhhwang/project-3-group-5/assets/152139070/99296cdb-5a97-47e6-8f7e-747d1835ad4c)
+
+**Step 4: Plotting the map and saving the file**
+
+![Screenshot 2024-04-03 at 4 40 17 pm](https://github.com/hazelhhwang/project-3-group-5/assets/152139070/1b21ee6d-97c5-4ceb-917e-b5525334c242)
+
+
+
+**The bar charts were done using Matplotlib with Seaborn, Pyplot, and Pair Plot APIs. The date were extracted from the CSVs gathered from PostgreSQL results. The codes were pretty standard and import of dependencies, reading the CSV files, and writing the simple codes were basically the steps necessary to come up with the charts.** 
+
+
+![Screenshot 2024-04-03 at 4 00 43 pm](https://github.com/hazelhhwang/project-3-group-5/assets/152139070/8c8ce624-9f03-4f70-b8a3-5eff79bf4d38)
 
 ## 4. Filtering Eateries by Price (Marianne)
 
