@@ -169,7 +169,7 @@ This provides a step-by-step guide on how the `index.html` file for Project 3: D
    - Included placeholders for map visualisations.
 
 8. **Hyperlink**:
-   - Linked to heatmap.html
+   - Linked to 'heatmap.html'
      
 9. **Restaurant List**:
    - Added a section for displaying the top 10 restaurants by price level using `<div id="restaurantsContainer" class="visualisation">`.
