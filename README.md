@@ -168,11 +168,14 @@ This provides a step-by-step guide on how the `index.html` file for Project 3: D
    - Created div elements (`<div id="streetMap" class="visualisation">` and `<div id="clusterMap" class="visualisation">`) to serve as containers for the street map and cluster map visualisations, respectively.
    - Included placeholders for map visualisations.
 
-8. **Restaurant List**:
+8. **Hyperlink**:
+   - Linked to heatmap.html
+     
+9. **Restaurant List**:
    - Added a section for displaying the top 10 restaurants by price level using `<div id="restaurantsContainer" class="visualisation">`.
    - Included a dropdown menu for filtering by price level within this section.
 
-9. **JavaScript Dependencies**:
+10. **JavaScript Dependencies**:
    - Linked the Leaflet.js library from a CDN using `<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>`.
    - Included custom JavaScript files for map rendering and data manipulation:
      ```html
